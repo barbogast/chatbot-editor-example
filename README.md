@@ -1,9 +1,29 @@
-# Sanity Clean Content Studio
+Example studio with 2 different approaches at structuring chatbots
 
-Congratulations, you have now installed the Sanity Content Studio, an open source real-time content editing environment connected to the Sanity backend.
+### Example 1 
+uses a chatbot as top level document. Questions are then a field of the chatbot
 
-Now you can do the following things:
+Advantages:
+- chatbots can be created within the editor
+- properties of chatbot can be edited
+- feels very "natural"
 
-- [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
-- [Join the community Slack](https://slack.sanity.io/?utm_source=readme)
-- [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+Disadvantages:
+- references don't work
+- list of questions is not sortable and space is limited. Get's inconvenient after 20+ questions
+
+### Example 2
+uses a question as top level component. This requires a new document type for each 
+chatbot.
+
+Advantages:
+- references work
+- list of question has more vertical space and is sortable
+
+Disadvantages:
+- needs new document type for each chatbot
+- no place to maintain properties on the level of a chatbot
+- documents need to be published before they can be referenced. It would be more natural though to publish a chatbot as a whole
+- there can be only one question type, even though we would need multiple types with different fields for MultipleChoiceQuestion, TestFieldQuestion, ....
+  - I just realise that this would be doable by creating a document type per question and chatbot. But it would be strange to have the questions
+    divided by type instead of appearing in the order they appear in the bot.
