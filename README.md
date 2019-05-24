@@ -3,12 +3,12 @@ Example studio with 2 different approaches at structuring chatbots
 ### Example 1 
 uses a chatbot as top level document. Questions are then a field of the chatbot
 
-Advantages:
+*Advantages:*
 - chatbots can be created within the editor
 - properties of chatbot can be edited
 - feels very "natural"
 
-Disadvantages:
+*Disadvantages:*
 - references don't work
 - list of questions is not sortable and space is limited. Get's inconvenient after 20+ questions
 
@@ -16,11 +16,11 @@ Disadvantages:
 uses a question as top level component. This requires a new document type for each 
 chatbot.
 
-Advantages:
+*Advantages:*
 - references work
 - list of question has more vertical space and is sortable
 
-Disadvantages:
+*Disadvantages:*
 - needs new document type for each chatbot
 - no place to maintain properties on the level of a chatbot
 - documents need to be published before they can be referenced. It would be more natural though to publish a chatbot as a whole
